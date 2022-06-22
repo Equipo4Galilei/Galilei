@@ -1,0 +1,48 @@
+html {
+    font-size: 16px;
+}
+
+.social-bar {
+    position: fixed;
+    right: 0;
+    top: 35%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+}
+
+.icon {
+    color: black;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+}
+
+.icon-facebook {
+    background: #E1DDBF;
+}
+
+.icon-twitter {
+    background: #D1CB9F;
+}
+
+.icon-instagram {
+    background: #C6BF88;
+}
+
+.icon:first-child {
+    border-radius: 2rem 0 0 0;
+}
+
+.icon:last-child {
+    border-radius: 0 0 0 2rem;
+}
+
+.icon:hover {
+    padding-right: 6rem;
+    border-radius: 2rem 0 0 3rem;
+    box-shadow: 0 0 10rem rgba(235, 220, 11, 0.884);
+}
