@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <--Parte SocialBar -->    
+    <link rel="stylesheet" href="Fuentes.css">
+    <link rel="stylesheet" href="Estilo.css">
+    <--Parte SocialBar -->
+
     <title>Inventarios Facil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
@@ -17,6 +23,13 @@
 </head>
 <body>
 
+    <!--Barra Social -->    
+   <div class="social-bar">
+        <a href="https://www.facebook.com/Galilei-110284478389509" class="icon icon-facebook" target="_blank"></a>
+        <a href="https://twitter.com/Galileiutsc" class="icon icon-twitter" target="_blank"></a>
+        <a href="https://www.instagram.com/galileiutsc/" class="icon icon-instagram" target="_blank"></a>
+    </div>
+    
     <!--Barra de navegacion -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
