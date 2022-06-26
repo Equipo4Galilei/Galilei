@@ -9,10 +9,10 @@ if(isset($_POST['crear_tabla'])){
 
 
     if(empty($resultado)){
-        echo "error en la consulta";
+      echo '<script language="javascript">Swal.fire("No tiene ningun registro")</script>';
     }else {
        echo '
-       <table id="example" class="table">
+       <table id="example" class="table table-dark table-hover" >
        <thead class="table-dark">
          <tr>
            <th>Nombre</th>
@@ -44,10 +44,10 @@ if(isset($_POST['crear_tabla'])){
 if(isset($_POST['crear_tabla_del'])){
   $resultado =  $obj -> table();
   if(empty($resultado)){
-      echo "error en la consulta";
+    echo '<script language="javascript">Swal.fire("No tiene ningun registro")</script>';
   }else {
      echo '
-     <table id="example" class="table">
+     <table id="example" class="table table-dark table-hover" >
      <thead class="table-dark">
        <tr>
        <th>ID Usuario</th>
@@ -77,10 +77,10 @@ if(isset($_POST['crear_tabla_del'])){
        if(isset($_POST['crear_tabla_mod'])){
         $resultado =  $obj -> table();
         if(empty($resultado)){
-            echo "error en la consulta";
+          echo '<script language="javascript">Swal.fire("No tiene ningun registro")</script>';
         }else {
            echo '
-           <table id="example" class="table">
+           <table id="example" class="table table-dark table-hover" >
            <thead class="table-dark">
              <tr>
              <th>ID Usuario</th>
@@ -119,12 +119,10 @@ if(isset($_POST['delete_reg'])){
   if($resultado == "true"){
     exit(json_encode([
       "status" => "1",
-      "nombre" => "poot"
     ]));
   }else{
     exit(json_encode([
       "status" => "2",
-      "nombre" => "victor poot"
     ]));
   }
 

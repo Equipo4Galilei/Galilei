@@ -66,14 +66,14 @@ function eliminar_registro(id) {
                 if (resultado.status == 1) {
                     Swal.fire(
                         'Exito!',
-                        'registro eliminado exitosamente! ' + resultado.nombre,
+                        'registro eliminado exitosamente! ',
                         'success'
                     )
                     create_table()
                 } else {
                     Swal.fire(
                         'Error!',
-                        'error al eliminar registro!' + resultado.nombre,
+                        'error al eliminar registro!' ,
                         'error'
                     )
                 }

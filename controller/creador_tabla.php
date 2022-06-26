@@ -9,13 +9,14 @@ if(isset($_POST['crear_tabla'])){
 
 
     if(empty($resultado)){
-        echo "error en la consulta";
+        echo '<script language="javascript">Swal.fire("No tiene ningun registro")</script>';
+        
     }else {
        echo '
-       <table id="example" class="table">
-       <thead class="table-dark">
+       <table id="example" class="table table-dark table-hover" >
+       <thead class="table-dark" >
          <tr>
-           <th>Id del equipo</th>
+           <th>Equipo</th>
            <th>Usuario</th>
            <th>Modelo</th>
            <th>Marca</th>
@@ -46,10 +47,10 @@ if(isset($_POST['crear_tabla'])){
 if(isset($_POST['crear_tabla_del'])){
   $resultado =  $obj -> table();
   if(empty($resultado)){
-      echo "error en la consulta";
+    echo '<script language="javascript">Swal.fire("No tiene ningun registro")</script>';
   }else {
      echo '
-     <table id="example" class="table">
+     <table id="example" class="table table-dark table-hover">
      <thead class="table-dark">
        <tr>
         <th>ID</th>
@@ -81,10 +82,10 @@ if(isset($_POST['crear_tabla_del'])){
        if(isset($_POST['crear_tabla_mod'])){
         $resultado =  $obj -> table();
         if(empty($resultado)){
-            echo "error en la consulta";
+          echo '<script language="javascript">Swal.fire("No tiene ningun registro")</script>';
         }else {
            echo '
-           <table id="example" class="table">
+           <table id="example" class="table table-dark table-hover">
            <thead class="table-dark">
              <tr>
               <th>ID</th>
