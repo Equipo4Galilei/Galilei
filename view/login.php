@@ -4,33 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventarios Facil</title>
+    <title>Galilei</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/css/all.min.css'>
+    <link rel="stylesheet" href="../assets/css/Echatbot.css">
+    
+    <!--GALERIA -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
+<link rel='stylesheet' href='https://static.fontawesome.com/css/fontawesome-app.css'>
+<link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'><link rel="stylesheet" href="../assets/css/Galestilo.css">
+    <!--GALERIA -->
+
+    <!--NAVEGADOR PEGABLE -->
+    <link rel="stylesheet" href="../assets/css/Navestilo.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--NAVEGADOR PEGABLE -->
+
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../assets/css/Fuentes.css">
+    <link rel="stylesheet" href="../assets/css/Estilo.css">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
 
+
+</head>
+
+<body>
+ 
+
+
+<!--NAVEGADOR PEGABLE -->
+<header>
+        <a href="#"><img id="logo2" src="../assets/img/LogoGalilei.png" style="width:70px"> <img id="logo" src="../assets/img/Logogali.png" style="width:150px"></a>
+        <div class="menu">
+        <a href="">Inicio</a>
+            <a  href="#">Servicios</a>
+            <a  href="#">Acerca de</a>
+            <a  href="#">Info</a>
+            <a  href="#">Contacto</a>
+        </div>
+    </header>
+
+<!--TERMINA NAVEGADOR PEGABLE -->
+
+     <!--Barra Social -->    
+   <div class="social-bar" >
+        <a href="https://www.facebook.com/Galilei-110284478389509" class="icon icon-facebook" target="_blank"></a>
+        <a href="https://twitter.com/Galileiutsc" class="icon icon-twitter" target="_blank"></a>
+        <a href="https://www.instagram.com/galileiutsc/" class="icon icon-instagram" target="_blank"></a>
+    </div>
+    
     <!--Barra de navegacion -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+            <a class="navbar-brand" href="#">
+            <img src="../assets/img/Logo.PNG" alt="Logo" style="width:40px;" class="rounded-pill">
+            </a>
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#section1">Quienes somos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#section2">A que nos dedicamos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#section3">Que queremos</a>
+            </li>
+            </ul>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                    
                     </li>
                 </ul>
-                <button onclick="open_reg_modal()" class="btn btn-primary" type="button">Acceder</button>
+                <button onclick="open_reg_modal()" class="btn btn-light" type="button">Acceder</button>
                 
                 <div class="modal fade" id="modal_add_user">
                     <div class="modal-dialog">
@@ -58,8 +115,8 @@
                             <!-- Modal footer -->
                             <div class="modal-footer">
                                 <a href="registro">No tienes cuenta? Registrate</a>
-                                <button type="button" onclick="login()" class="btn btn-primary">Acceder</button> 
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar </button>
+                                <button type="button" onclick="login()" class="btn btn-outline-success">Acceder</button> 
+                                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancelar </button>
                             </div>
                 
 
@@ -70,58 +127,221 @@
         </div>
     </nav>
 
-    <div class="container-fluid mt-3">
-        <h3 style="text-align: center;">Pagina Web dedicada 100% a inventario de equipos</h3>
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-        <!-- Indicators/dots -->
-        <div class="carousel-indicators">
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-        </div>
-
-        <!-- The slideshow/carousel -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="../assets/img/inventarios.jpg" alt="Los Angeles" class="d-block" style="width:100%">
-            <div class="carousel-caption">
-            <h3>Manejamos base de datos</h3>
-            <p>Manejamos un buena redundancia de datos para almacen en nuestro servidor tus registors</p>
+            <div class="carousel-item active">
+                <img src="../assets/img/1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/img/2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/img/3.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
-        <div class="carousel-item">
-            <img src="../assets/img/inventarios.jpg" alt="Chicago" class="d-block" style="width:100%">
-            <div class="carousel-caption">
-            <h3>Chicago</h3>
-            <p>Thank you, Chicago!</p>
-            </div> 
-        </div>
-        <div class="carousel-item">
-            <img src="../assets/img/inventarios.jpg" alt="New York" class="d-block" style="width:100%">
-            <div class="carousel-caption">
-            <h3>New York</h3>
-            <p>We love the Big Apple!</p>
-            </div>  
-        </div>
-        </div>
+    </div>
+   
 
-        <!-- Left and right controls/icons -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-        </button>
-        </div>
+    
+     <!-- GALERIA DESPLEGABLE -->
+     <div  class="options">
+   <div class="option active" style="--optionBackground:url(https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-j-p2223a.jpg);">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-satellite"></i>
+         </div>
+         <div class="info">
+            <div class="main">JAMES WEBB</div>
+            <div class="sub">Telescopio Espacial</div>
+         </div>
+      </div>
+   </div>
+   <div class="option" style="--optionBackground:url(https://cdn.motor1.com/images/mgl/Y1Zll/s3/el-telescopio-espacial-hubble-lleva-mas-de-una-semana-inactivo-el-fallo-esta-en-una-computadora-interna-de-1974.webp);">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-satellite-dish"></i>
+         </div>
+         <div class="info">
+            <div class="main">HUBBLE</div>
+            <div class="sub">Telescopio Espacial</div>
+         </div>
+      </div>
+   </div>
+   <div class="option" style="--optionBackground:url(https://www.eventoplus.com.ar/wp-content/uploads/2022/05/1652013594_Comparando-las-impresionantes-imagenes-del-Telescopio-Espacial-Webb-con-otros.jpg);">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+         <i class="fas fa-meteor"></i>
+         </div>
+         <div class="info">
+            <div class="main">8K</div>
+            <div class="sub">Fotos con mayor calidad</div>
+         </div>
+      </div>
+   </div>
+   <div class="option" style="--optionBackground:url(https://larepublica.pe/resizer/J7qLdwYQ-hlHymLKNqXX7JKHVVA=/1250x735/top/smart/cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/H43EIOFIIZBDPE3L7LQI3NV3MU.jpg);">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+         <i class="fa fa-solid fa-user-astronaut"></i>
+         </div>
+         <div class="info">
+            <div class="main">Comparacion</div>
+            <div class="sub">Una lucha que tiene un ganador</div>
+         </div>
+      </div>
+   </div>
+   <div class="option" style="--optionBackground:url( https://www.panoramaaudiovisual.com/wp-content/webp-express/webp-images/uploads/2017/02/satelite-eutelsat-768x430.jpg.webp);">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-sun"></i>
+         </div>
+         <div class="info">
+            <div class="main">Avances tecnologicos</div>
+            <div class="sub">Un nuevo vistaso mas aya de lo que vemos</div>
+         </div>
+      </div>
+   </div>
+</div>
+     <!-- GALERIA DESPLEGABLE -->
 
-        <div class="container-fluid mt-3">
-        <h3 style="text-align: center;">Ejemplos de lo que manejamos</h3>
-        <p style="text-align: center;">Somos una empresa comprometidos con tus datos personales.</p>
-        </div>
+
+    <div id="section1" class="container-fluid text-dark" style="padding:100px 20px; background-color: #E1DD8F;">
+        <h1>Quienes somos?</h1>
+        <p>Somos una empresa dedicada a la fabricacion de partes de telescopios espaciales y  a la administracion de inventarios.</p>
     </div>
 
+    <div id="section2" class="container-fluid text-dark" style="padding:100px 20px; background-color: #D1CB9F;">
+        <h1>A que nos dedicamos?</h1>
+        <p>Principalmente nos dedicamos a la administracion de base de datos de nuestros productos para su venta a las agencias</p>
+        <p>que ayudarian a agilizar el trabajo de distitas areas</p>
+    </div>
+
+    <div id="section3" class="container-fluid text-dark" style="padding:100px 20px; background-color: #C6BF88;">
+        <h1>Que queremos?</h1>
+        <p>Llegar a ser unos de los mayores contruibidores de productos telescopicos asi como expandirnos a lo satelital</p>
+        <p>.</p>
+    </div>
+
+
+            <!-- comentarios -->
+<div class="contenido">
+
+<ul class="team">
+    <li class="miembro co-fundador">
+        <div class="imagen"><img src="../assets/img/luis.png"></div>
+        <div class="descripcion">
+            <h3>Luis Enrique</h3>
+            <p>Deberíamos aplicar la misma forma a nuestras construcciones. Son la figura perfecta para ocupar espacios y seguir ampliando hacia todos los lados. Maravilloso.<br><a href="https://www.instagram.com/elg2510/" target="_blank">@LuisEnrique</a></p>
+        </div>
+    </li>
+    <li class="miembro co-fundador">
+        <div class="imagen"><img src="../assets/img/hugo.gif"></div>
+        <div class="descripcion">
+            <h3>Hector Hugo</h3>
+            <p>Sorprendió a todo el mundo. No tenía sentido que pudiéramos construir un telescopio de seis veces más capacidad que el Hubble y manteniendo los costes<br><a href="https://twitter.com/search?q=%23VerguenzaNacional&src=trend_click&vertical=trends"
+                    target="_blank">@Hugo</a></p>
+        </div>
+    </li>
+    <li class="miembro co-fundador">
+        <div class="imagen"><img src="../assets/img/dianet.jpg"></div>
+        <div class="descripcion">
+            <h3>Dianet Cruz</h3>
+            <p> Webb tiene el potencial de sorprender a la gente, incluso a las personas que están acostumbradas a las imágenes del telescopio espacial Hubble, y sé que es difícil de imaginar<br><a href="https://twitter.com/search?q=%23VerguenzaNacional&src=trend_click&vertical=trends"
+                    target="_blank">@Dianetcruz</a></p>
+        </div>
+    </li>
+    <li class="miembro co-fundador">
+        <div class="imagen"><img src="../assets/img/saul.jpg"></div>
+        <div class="descripcion">
+            <h3>Saúl Miguel</h3>
+            <p>Los hexágonos han demostrado gran capacidad de aprovechamiento del espacio y estructuralmente más resistente en el caso del panal, usado en el James Webb.<br><a href="https://www.instagram.com/thispersonissawl/" target="_blank">@thispersonissawl</a></p>
+        </div>
+    </li>
+</ul>
+</div>
+            <!-- comentarios -->
+
+
+<!--INICIA CHATBOT -->
+<button id='ocultar-mostrar' class="">Chat</button>
+
+<div id="phone-wrapper">
+    <div id="app">
+        <div id="landing" class="bg-darker text-light" style="">
+
+            <img class="planet" src="../assets/img/LogoGalilei.png">
+            <div>
+                <h1 class="mt-3">Chatbot <br>GALILEI</h1>
+            </div>
+            <form id="form-start">
+                <input type="text" name="username" id="username" value="" placeholder="Tu nombre" required>
+                <button type="submit" id="start-chat">Iniciar Chat</button>
+            </form>
+        </div>
+
+        <div id="header" class="bg-darker">
+            <div><button id="back-button" class="text-light btn-transparent btn-icon fas fa-arrow-left"></button></div>
+            <div class="text-light align-center">
+                <h2>ChatBot</h2>
+
+            </div>
+            <div>
+                <button id="nav-icon" class="text-light btn-transparent btn-icon fas fa-bars"></button>
+                <nav id="nav-container" style="display: none;">
+                    <ul class="nav">
+                        <li id="clear-history" class="nav-link"><span class="fas fa-trash-alt"></span>Limpiar Chat</li>
+                        <hr>
+                        <li id="sign-out" class="nav-link"><span class="fas fa-sign-out-alt"></span>Salir de usuario</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="message-board">
+
+
+        </div>
+        <div id="form" class="bg-light">
+            <div id="emoijis" style="display: none;">
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-grin-beam"></span></button>
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-grin"></span></button>
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-grin-wink"></span></button>
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-grin-tongue"></span></button>
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-grin-tongue-wink"></span></button>
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-kiss-wink-heart"></span></button>
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-grin-hearts"></span></button>
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-surprise"></span></button>
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-angry"></span></button>
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-tired"></span></button>
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-sad-tear"></span></button>
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-grin-squint-tears"></span></button>
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-sad-cry"></span></button>
+                <button class="smiley btn-transparent btn-icon"><span class="far fa-dizzy"></span></button>
+            </div>
+            <div><button id="emoi" class="btn-transparent btn-icon far fa-grin"></button></div>
+            <div id="message" placeholder="Type your message here" rows="1" contenteditable></div>
+            <div><button id="send" type="" class="btn-transparent btn-icon fas fa-paper-plane"></button></div>
+        </div>
+    </div>
+</div>
+<!--TERMINA CHATBOT -->
+
+
+
+    <footer class="bg-dark text-center text-white">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2022 Copyright:
+                <a class="text-white" href="#">Galilei - derechos reservados</a>
+            </div>
+            <!-- Copyright -->
+    </footer>
+    
+
+    
     <script>
         function open_reg_modal() {
             $('#modal_add_user').modal('toggle');
@@ -133,5 +353,24 @@
 
 
 <script src="../assets/js/login.js"></script>
+
+            <!-- ESTO ES JAVASCRIPT DE CHATBOT -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="../assets/js/botscript.js"></script>
+                <!-- ESTO ES JAVASCRIPT DE CHATBOT -->
+
+
+ <!-- JAVASCRIPT DE LA GALERIA -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="../assets/js/Galescript.js"></script>
+ <!-- JAVASCRIPT DE LA GALERIA -->
+
+ <!-- JAVASCRIPT DE LA NAVEGADOR PEGABLE -->
+ <script src="../assets/js/Navscript.js"></script>
+
+ <!-- JAVASCRIPT DE LA NAVEGADOR PEGABLE -->
+
+
 </body>
 </html>

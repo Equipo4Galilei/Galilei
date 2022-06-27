@@ -6,7 +6,6 @@ function login(){
     
     datos.append("usuario", usuario);
     datos.append("contrasena", pass);
-    datos.append("tipo_usuario","1");
 
    
 
@@ -24,7 +23,7 @@ function login(){
             console.log(respuesta)
             if(respuesta.status == "1"){
                 Swal.fire({
-                    title: 'Iniciando sesion',
+                    title: 'Iniciando Sesion',
                     text: "Bienvenido " + respuesta.usuario,
                     icon: 'success',
                     showCancelButton: true,
